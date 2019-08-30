@@ -10,13 +10,36 @@ import UIKit
 
 class UserViewController: UIViewController {
     
-    var allUser:[Person]! {
+    @IBOutlet var userSearchBar: UISearchBar!
+    
+    var allUser = [Person]() {
         didSet{
             DispatchQueue.main.async {
                 self.userTableView.reloadData()
             }
         }
     }
+    
+    var userSearchResults:[Person] {
+        get{
+            guard let searchString = UserSearchString else {
+                return allUser
+            }
+            guard searchString != "" else {
+                return allUser
+            }
+            return allUser.filter({$0.name.convertFirstLetterToUpperCase().lowercased().replacingOccurrences(of: " ", with: "").contains(searchString.lowercased().replacingOccurrences(of: " ", with: ""))})
+        }
+    }
+    
+    var UserSearchString:String? = nil {
+        didSet {
+            self.userTableView.reloadData()
+        }
+    }
+    
+    
+    
     
     @IBOutlet var userTableView: UITableView!
     override func viewDidLoad() {
@@ -28,7 +51,8 @@ class UserViewController: UIViewController {
     func setup(){
         userTableView.delegate = self
         userTableView.dataSource = self
-        self.navigationItem.title = "Cantacts"
+        userSearchBar.delegate = self
+        self.navigationItem.title = "Contacts"
     }
     
    private func fetchUserData(){
@@ -46,14 +70,14 @@ class UserViewController: UIViewController {
 extension UserViewController:UITableViewDelegate{}
 extension UserViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        guard let users = allUser else {return 0}
-        return users.count
+       
+        return userSearchResults.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath)
         
-        let info = allUser[indexPath.row]
+        let info = userSearchResults[indexPath.row]
         
         cell.textLabel?.text = info.name.convertFirstLetterToUpperCase()
         cell.detailTextLabel?.text = info.location.state
@@ -63,11 +87,17 @@ extension UserViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let detailedUserVC = storyboard?.instantiateViewController(withIdentifier: "userDetailedVC") as! UserDetailedViewController
         
-        let info = allUser[indexPath.row]
+        let info = userSearchResults[indexPath.row]
         
         detailedUserVC.detailedUser = info
         
         self.navigationController?.pushViewController(detailedUserVC, animated: true)
     }
+}
 
+extension UserViewController: UISearchBarDelegate{
+    
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        UserSearchString = searchBar.text
+    }
 }
