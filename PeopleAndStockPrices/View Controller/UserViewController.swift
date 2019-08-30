@@ -28,6 +28,7 @@ class UserViewController: UIViewController {
     func setup(){
         userTableView.delegate = self
         userTableView.dataSource = self
+        self.navigationItem.title = "Cantacts"
     }
     
    private func fetchUserData(){
@@ -57,6 +58,16 @@ extension UserViewController:UITableViewDataSource{
         cell.textLabel?.text = info.name.convertFirstLetterToUpperCase()
         cell.detailTextLabel?.text = info.location.state
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let detailedUserVC = storyboard?.instantiateViewController(withIdentifier: "userDetailedVC") as! UserDetailedViewController
+        
+        let info = allUser[indexPath.row]
+        
+        detailedUserVC.detailedUser = info
+        
+        self.navigationController?.pushViewController(detailedUserVC, animated: true)
     }
 
 }

@@ -121,6 +121,76 @@
             </objects>
             <point key="canvasLocation" x="860.86956521739137" y="-199.55357142857142"/>
         </scene>
+        <!--User Detailed View Controller-->
+        <scene sceneID="IM5-X2-MMb">
+            <objects>
+                <viewController storyboardIdentifier="userDetailedVC" id="v65-FR-gJg" customClass="UserDetailedViewController" customModule="PeopleAndStockPrices" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2LA-JY-W3s">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gx6-YO-Xvt">
+                                <rect key="frame" x="87" y="122" width="240" height="208"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="208" id="Kx8-3I-vSG"/>
+                                    <constraint firstAttribute="width" constant="240" id="sIs-MQ-fny"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eul-35-d9g">
+                                <rect key="frame" x="87" y="396" width="240" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="9B2-gf-vSV"/>
+                                    <constraint firstAttribute="height" constant="21" id="aeq-XS-3j7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yL9-X8-oRw">
+                                <rect key="frame" x="87" y="455" width="240" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="CE7-lg-lnu"/>
+                                    <constraint firstAttribute="width" constant="240" id="aDe-Xe-5Gl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBA-L9-xO5">
+                                <rect key="frame" x="87" y="517" width="240" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="4no-gF-u9B"/>
+                                    <constraint firstAttribute="height" constant="21" id="XU0-O0-ig2"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="eul-35-d9g" firstAttribute="centerX" secondItem="cR7-Ro-kvQ" secondAttribute="centerX" id="Ao1-Zq-Is9"/>
+                            <constraint firstItem="yL9-X8-oRw" firstAttribute="centerX" secondItem="cR7-Ro-kvQ" secondAttribute="centerX" id="MWY-U0-GMh"/>
+                            <constraint firstItem="Gx6-YO-Xvt" firstAttribute="top" secondItem="cR7-Ro-kvQ" secondAttribute="top" constant="78" id="hRH-59-syO"/>
+                            <constraint firstItem="eul-35-d9g" firstAttribute="top" secondItem="Gx6-YO-Xvt" secondAttribute="bottom" constant="66" id="iUa-wP-eIG"/>
+                            <constraint firstItem="Gx6-YO-Xvt" firstAttribute="centerX" secondItem="cR7-Ro-kvQ" secondAttribute="centerX" id="kHj-Ub-fb9"/>
+                            <constraint firstItem="yL9-X8-oRw" firstAttribute="top" secondItem="eul-35-d9g" secondAttribute="bottom" constant="38" id="klo-PH-6qN"/>
+                            <constraint firstItem="MBA-L9-xO5" firstAttribute="top" secondItem="yL9-X8-oRw" secondAttribute="bottom" constant="41" id="tdo-mS-fMe"/>
+                            <constraint firstItem="MBA-L9-xO5" firstAttribute="centerX" secondItem="cR7-Ro-kvQ" secondAttribute="centerX" id="xaM-1P-kdY"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="cR7-Ro-kvQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="userEmail" destination="yL9-X8-oRw" id="JXi-Iv-qSU"/>
+                        <outlet property="userImage" destination="Gx6-YO-Xvt" id="48Y-PA-roe"/>
+                        <outlet property="userLocation" destination="MBA-L9-xO5" id="M6p-HN-ef7"/>
+                        <outlet property="userName" destination="eul-35-d9g" id="d2A-YB-iKm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rwz-sS-NjC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1691.304347826087" y="-199.55357142857142"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="Urg-lY-49p">
             <objects>
