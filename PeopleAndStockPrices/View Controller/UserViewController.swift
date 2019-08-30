@@ -9,12 +9,54 @@
 import UIKit
 
 class UserViewController: UIViewController {
-
+    
+    var allUser:[Person]! {
+        didSet{
+            DispatchQueue.main.async {
+                self.userTableView.reloadData()
+            }
+        }
+    }
+    
+    @IBOutlet var userTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setup()
+        fetchUserData()
     }
-
-
+    
+    func setup(){
+        userTableView.delegate = self
+        userTableView.dataSource = self
+    }
+    
+   private func fetchUserData(){
+        UserAPIClient.shared.fetchData { (result) in
+            switch result {
+            case .failure(let error):
+                print("cant retrieve user \(error)")
+            case .success(let user):
+                self.allUser = user.results
+            }
+        }
+    }
 }
 
+extension UserViewController:UITableViewDelegate{}
+extension UserViewController:UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        guard let users = allUser else {return 0}
+        return users.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "userCell", for: indexPath)
+        
+        let info = allUser[indexPath.row]
+        
+        cell.textLabel?.text = info.name.convertFirstLetterToUpperCase()
+        cell.detailTextLabel?.text = info.location.state
+        return cell
+    }
+
+}

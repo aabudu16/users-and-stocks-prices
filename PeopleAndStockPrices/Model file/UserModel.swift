@@ -15,19 +15,18 @@ class ResultWrapper:Codable{
 
 struct Person:Codable{
     let gender:String
-    let name:[PersonsName]
-    let location:[Location]
+    let name:PersonsName
+    let location:Location
     let email:String
-    let dob:[DOB]
+    let dob:DOB
 }
 
 struct PersonsName:Codable{
     let title:String
     let first:String
     let last:String
-    
-    func toUpperCase() -> String{
-        let fullName = "\(title.uppercased()) \(first.uppercased()) \(last.uppercased())"
+    func convertFirstLetterToUpperCase() -> String{
+        let fullName = "\(title.capitalizingFirstLetter()) \(first.capitalizingFirstLetter()) \(last.capitalizingFirstLetter())"
         return fullName
     }
 }

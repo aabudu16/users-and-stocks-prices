@@ -3,7 +3,8 @@
 import UIKit
 
 struct UserAPIClient{
-   static let shared = UserAPIClient()
+    //singleton Method
+    static let shared = UserAPIClient()
     
     let userURLString = "https://randomuser.me/api/?results=50"
     
@@ -26,6 +27,6 @@ struct UserAPIClient{
             }catch let jsonError{
                 completion(.failure(jsonError))
             }
-        }
+        }.resume()
     }
 }
