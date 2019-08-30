@@ -13,7 +13,9 @@ class UserDetailedViewController: UIViewController {
     @IBOutlet var userImage: UIImageView!
     @IBOutlet var userName: UILabel!
     @IBOutlet var userEmail: UILabel!
-    @IBOutlet var userLocation: UILabel!
+    @IBOutlet var userStreet: UILabel!
+    @IBOutlet var userCity: UILabel!
+    @IBOutlet var userState: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,6 +26,8 @@ class UserDetailedViewController: UIViewController {
         userImage.image = UIImage(named: "profileImage")
         userName.text = detailedUser.name.convertFirstLetterToUpperCase()
         userEmail.text = detailedUser.email
-        userLocation.text = detailedUser.location.state
+        userStreet.text = detailedUser.location.street
+        userCity.text = detailedUser.location.city
+        userState.text = detailedUser.location.state
     }
 }

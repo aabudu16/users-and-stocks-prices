@@ -162,12 +162,26 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="location" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBA-L9-xO5">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="street" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBA-L9-xO5">
                                 <rect key="frame" x="87" y="517" width="240" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="240" id="4no-gF-u9B"/>
                                     <constraint firstAttribute="height" constant="21" id="XU0-O0-ig2"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="city" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEy-XE-Kwl">
+                                <rect key="frame" x="94" y="546" width="227" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="state" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tii-RD-pNO">
+                                <rect key="frame" x="94" y="575" width="227" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -187,10 +201,12 @@
                         <viewLayoutGuide key="safeArea" id="cR7-Ro-kvQ"/>
                     </view>
                     <connections>
+                        <outlet property="userCity" destination="kEy-XE-Kwl" id="Waa-7N-jdI"/>
                         <outlet property="userEmail" destination="yL9-X8-oRw" id="JXi-Iv-qSU"/>
                         <outlet property="userImage" destination="Gx6-YO-Xvt" id="48Y-PA-roe"/>
-                        <outlet property="userLocation" destination="MBA-L9-xO5" id="M6p-HN-ef7"/>
                         <outlet property="userName" destination="eul-35-d9g" id="d2A-YB-iKm"/>
+                        <outlet property="userState" destination="tii-RD-pNO" id="0L2-5o-gfZ"/>
+                        <outlet property="userStreet" destination="MBA-L9-xO5" id="ERL-DZ-QBP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rwz-sS-NjC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -215,11 +231,11 @@
             </objects>
             <point key="canvasLocation" x="-904" y="129"/>
         </scene>
-        <!--Item 1-->
+        <!--Users-->
         <scene sceneID="M9Y-Qa-SeN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jiE-U2-UvD" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 1" id="rgB-0K-f0Z"/>
+                    <tabBarItem key="tabBarItem" title="Users" id="rgB-0K-f0Z"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w8c-lI-h4l">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -234,11 +250,11 @@
             </objects>
             <point key="canvasLocation" x="-49.275362318840585" y="-199.55357142857142"/>
         </scene>
-        <!--Item 2-->
+        <!--\-->
         <scene sceneID="tQP-Ie-OBy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ibu-18-29C" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="Y9p-ap-lsq"/>
+                    <tabBarItem key="tabBarItem" title="\" id="Y9p-ap-lsq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y6Y-zv-Vxw">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
