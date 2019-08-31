@@ -172,16 +172,22 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="city" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEy-XE-Kwl">
-                                <rect key="frame" x="94" y="546" width="227" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="city" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kEy-XE-Kwl">
+                                <rect key="frame" x="93.5" y="580" width="227" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="227" id="0po-ut-pWI"/>
+                                    <constraint firstAttribute="height" constant="21" id="MzS-i5-cjy"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="state" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tii-RD-pNO">
-                                <rect key="frame" x="94" y="575" width="227" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="state" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tii-RD-pNO">
+                                <rect key="frame" x="93.5" y="635" width="227" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="JnB-4n-dH3"/>
+                                    <constraint firstAttribute="width" constant="227" id="KRa-G6-htY"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -189,12 +195,16 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="tii-RD-pNO" firstAttribute="top" secondItem="kEy-XE-Kwl" secondAttribute="bottom" constant="34" id="1sc-rU-rL1"/>
+                            <constraint firstItem="tii-RD-pNO" firstAttribute="centerX" secondItem="cR7-Ro-kvQ" secondAttribute="centerX" id="3FU-Q1-V8t"/>
                             <constraint firstItem="eul-35-d9g" firstAttribute="centerX" secondItem="cR7-Ro-kvQ" secondAttribute="centerX" id="Ao1-Zq-Is9"/>
                             <constraint firstItem="yL9-X8-oRw" firstAttribute="centerX" secondItem="cR7-Ro-kvQ" secondAttribute="centerX" id="MWY-U0-GMh"/>
                             <constraint firstItem="Gx6-YO-Xvt" firstAttribute="top" secondItem="cR7-Ro-kvQ" secondAttribute="top" constant="78" id="hRH-59-syO"/>
+                            <constraint firstItem="kEy-XE-Kwl" firstAttribute="centerX" secondItem="cR7-Ro-kvQ" secondAttribute="centerX" id="hTe-iP-CDd"/>
                             <constraint firstItem="eul-35-d9g" firstAttribute="top" secondItem="Gx6-YO-Xvt" secondAttribute="bottom" constant="66" id="iUa-wP-eIG"/>
                             <constraint firstItem="Gx6-YO-Xvt" firstAttribute="centerX" secondItem="cR7-Ro-kvQ" secondAttribute="centerX" id="kHj-Ub-fb9"/>
                             <constraint firstItem="yL9-X8-oRw" firstAttribute="top" secondItem="eul-35-d9g" secondAttribute="bottom" constant="38" id="klo-PH-6qN"/>
+                            <constraint firstItem="kEy-XE-Kwl" firstAttribute="top" secondItem="MBA-L9-xO5" secondAttribute="bottom" constant="42" id="m1Q-Jq-Kpe"/>
                             <constraint firstItem="MBA-L9-xO5" firstAttribute="top" secondItem="yL9-X8-oRw" secondAttribute="bottom" constant="41" id="tdo-mS-fMe"/>
                             <constraint firstItem="MBA-L9-xO5" firstAttribute="centerX" secondItem="cR7-Ro-kvQ" secondAttribute="centerX" id="xaM-1P-kdY"/>
                         </constraints>
@@ -250,11 +260,11 @@
             </objects>
             <point key="canvasLocation" x="-49.275362318840585" y="-199.55357142857142"/>
         </scene>
-        <!--\-->
+        <!--Stock Price-->
         <scene sceneID="tQP-Ie-OBy">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ibu-18-29C" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="\" id="Y9p-ap-lsq"/>
+                    <tabBarItem key="tabBarItem" title="Stock Price" id="Y9p-ap-lsq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y6Y-zv-Vxw">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
