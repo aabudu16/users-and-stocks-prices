@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -19,6 +19,10 @@
 		85EBCF0E2319C28400DD5A5F /* UserDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EBCF0D2319C28400DD5A5F /* UserDetailedViewController.swift */; };
 		85EBCF112319F14500DD5A5F /* StockPriceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EBCF102319F14500DD5A5F /* StockPriceViewController.swift */; };
 		85EBCF132319F16000DD5A5F /* StockPriceDetailedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EBCF122319F16000DD5A5F /* StockPriceDetailedViewController.swift */; };
+		85EBCF15231D602900DD5A5F /* StockAPIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EBCF14231D602900DD5A5F /* StockAPIClient.swift */; };
+		85EBCF17231D657000DD5A5F /* StockModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EBCF16231D657000DD5A5F /* StockModel.swift */; };
+		85EBCF19231D7FF100DD5A5F /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = 85EBCF18231D7FF100DD5A5F /* Podfile */; };
+		B5D76BCDE14A0471E5579C65 /* Pods_PeopleAndStockPrices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1B728B7D41D478D03D06BCA3 /* Pods_PeopleAndStockPrices.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +36,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		029AD4D5F559366391EFE154 /* Pods-PeopleAndStockPrices.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleAndStockPrices.debug.xcconfig"; path = "Target Support Files/Pods-PeopleAndStockPrices/Pods-PeopleAndStockPrices.debug.xcconfig"; sourceTree = "<group>"; };
+		1B728B7D41D478D03D06BCA3 /* Pods_PeopleAndStockPrices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeopleAndStockPrices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		44BB50DC5AC7F15DBF0E2B01 /* Pods-PeopleAndStockPrices.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleAndStockPrices.release.xcconfig"; path = "Target Support Files/Pods-PeopleAndStockPrices/Pods-PeopleAndStockPrices.release.xcconfig"; sourceTree = "<group>"; };
 		85EBCEE123199E7600DD5A5F /* PeopleAndStockPrices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleAndStockPrices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85EBCEE423199E7700DD5A5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85EBCEE623199E7700DD5A5F /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -48,6 +55,9 @@
 		85EBCF0D2319C28400DD5A5F /* UserDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailedViewController.swift; sourceTree = "<group>"; };
 		85EBCF102319F14500DD5A5F /* StockPriceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPriceViewController.swift; sourceTree = "<group>"; };
 		85EBCF122319F16000DD5A5F /* StockPriceDetailedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockPriceDetailedViewController.swift; sourceTree = "<group>"; };
+		85EBCF14231D602900DD5A5F /* StockAPIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockAPIClient.swift; sourceTree = "<group>"; };
+		85EBCF16231D657000DD5A5F /* StockModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockModel.swift; sourceTree = "<group>"; };
+		85EBCF18231D7FF100DD5A5F /* Podfile */ = {isa = PBXFileReference; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B5D76BCDE14A0471E5579C65 /* Pods_PeopleAndStockPrices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,12 +79,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50992A5F93D93508972C42DF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				029AD4D5F559366391EFE154 /* Pods-PeopleAndStockPrices.debug.xcconfig */,
+				44BB50DC5AC7F15DBF0E2B01 /* Pods-PeopleAndStockPrices.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		671E85F7AE86D3E0AB2D6AFE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				1B728B7D41D478D03D06BCA3 /* Pods_PeopleAndStockPrices.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		85EBCED823199E7600DD5A5F = {
 			isa = PBXGroup;
 			children = (
+				85EBCF18231D7FF100DD5A5F /* Podfile */,
 				85EBCEE323199E7700DD5A5F /* PeopleAndStockPrices */,
 				85EBCEF823199E7800DD5A5F /* PeopleAndStockPricesTests */,
 				85EBCEE223199E7700DD5A5F /* Products */,
+				50992A5F93D93508972C42DF /* Pods */,
+				671E85F7AE86D3E0AB2D6AFE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -126,6 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				85EBCF052319A16300DD5A5F /* UserModel.swift */,
+				85EBCF16231D657000DD5A5F /* StockModel.swift */,
 			);
 			path = "Model file";
 			sourceTree = "<group>";
@@ -134,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				85EBCF082319A75400DD5A5F /* UserAPIClient.swift */,
+				85EBCF14231D602900DD5A5F /* StockAPIClient.swift */,
 			);
 			path = "API Client";
 			sourceTree = "<group>";
@@ -153,9 +186,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 85EBCEFE23199E7800DD5A5F /* Build configuration list for PBXNativeTarget "PeopleAndStockPrices" */;
 			buildPhases = (
+				47C3181A6279008DA827E485 /* [CP] Check Pods Manifest.lock */,
 				85EBCEDD23199E7600DD5A5F /* Sources */,
 				85EBCEDE23199E7600DD5A5F /* Frameworks */,
 				85EBCEDF23199E7600DD5A5F /* Resources */,
+				08B88444BD7ECE2B37E94FEF /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -229,6 +264,7 @@
 			files = (
 				85EBCEEF23199E7800DD5A5F /* LaunchScreen.storyboard in Resources */,
 				85EBCEEC23199E7800DD5A5F /* Assets.xcassets in Resources */,
+				85EBCF19231D7FF100DD5A5F /* Podfile in Resources */,
 				85EBCEEA23199E7700DD5A5F /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -242,6 +278,48 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		08B88444BD7ECE2B37E94FEF /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PeopleAndStockPrices/Pods-PeopleAndStockPrices-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PeopleAndStockPrices/Pods-PeopleAndStockPrices-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PeopleAndStockPrices/Pods-PeopleAndStockPrices-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		47C3181A6279008DA827E485 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PeopleAndStockPrices-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		85EBCEDD23199E7600DD5A5F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -250,8 +328,10 @@
 				85EBCEE723199E7700DD5A5F /* UserViewController.swift in Sources */,
 				85EBCF112319F14500DD5A5F /* StockPriceViewController.swift in Sources */,
 				85EBCF062319A16300DD5A5F /* UserModel.swift in Sources */,
+				85EBCF15231D602900DD5A5F /* StockAPIClient.swift in Sources */,
 				85EBCF132319F16000DD5A5F /* StockPriceDetailedViewController.swift in Sources */,
 				85EBCF092319A75400DD5A5F /* UserAPIClient.swift in Sources */,
+				85EBCF17231D657000DD5A5F /* StockModel.swift in Sources */,
 				85EBCEE523199E7700DD5A5F /* AppDelegate.swift in Sources */,
 				85EBCF0E2319C28400DD5A5F /* UserDetailedViewController.swift in Sources */,
 				85EBCF0C2319BA7000DD5A5F /* String-Extension.swift in Sources */,
@@ -414,6 +494,7 @@
 		};
 		85EBCEFF23199E7800DD5A5F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 029AD4D5F559366391EFE154 /* Pods-PeopleAndStockPrices.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -431,6 +512,7 @@
 		};
 		85EBCF0023199E7800DD5A5F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44BB50DC5AC7F15DBF0E2B01 /* Pods-PeopleAndStockPrices.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -7,6 +7,7 @@ import UIKit
 enum userError:Error{
     case noDataAvailable
     case cantProcessData
+    case urlCanNotBeConverted
 }
 
 struct UserAPIClient{
@@ -17,7 +18,8 @@ struct UserAPIClient{
     
     func fetchData(completion: @escaping (Result<[Person],userError>)-> ()){
         
-        guard let url = URL(string: userURLString) else {return}
+        guard let url = URL(string: userURLString) else {completion(.failure(.urlCanNotBeConverted))
+            return}
         
         URLSession.shared.dataTask(with: url) {data, _, _ in
             

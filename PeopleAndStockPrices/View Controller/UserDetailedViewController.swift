@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SAConfettiView
 
 class UserDetailedViewController: UIViewController {
     var detailedUser:Person!
@@ -18,8 +19,14 @@ class UserDetailedViewController: UIViewController {
     @IBOutlet var userState: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        setupBackgroundAnimation()
         setupDetailedVC()
+    }
+    func setupBackgroundAnimation(){
+      let confetti = SAConfettiView(frame: self.view.bounds)
+        confetti.type = .Confetti
+        view.addSubview(confetti)
+        confetti.startConfetti()
     }
     
     func setupDetailedVC(){
