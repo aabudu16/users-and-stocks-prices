@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Oud-bF-21G">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ff4-ab-7xy">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -200,22 +200,12 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Gx6-YO-Xvt">
-                                <rect key="frame" x="87" y="122" width="240" height="208"/>
+                                <rect key="frame" x="87" y="225" width="240" height="208"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="208" id="Kx8-3I-vSG"/>
                                     <constraint firstAttribute="width" constant="240" id="sIs-MQ-fny"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eul-35-d9g">
-                                <rect key="frame" x="87" y="396" width="240" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="240" id="9B2-gf-vSV"/>
-                                    <constraint firstAttribute="height" constant="21" id="aeq-XS-3j7"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yL9-X8-oRw">
                                 <rect key="frame" x="0.0" y="455" width="414" height="21"/>
                                 <constraints>
@@ -256,6 +246,16 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eul-35-d9g">
+                                <rect key="frame" x="87" y="173" width="240" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="240" id="9B2-gf-vSV"/>
+                                    <constraint firstAttribute="height" constant="21" id="aeq-XS-3j7"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -263,14 +263,14 @@
                             <constraint firstItem="tii-RD-pNO" firstAttribute="centerX" secondItem="cR7-Ro-kvQ" secondAttribute="centerX" id="3FU-Q1-V8t"/>
                             <constraint firstItem="eul-35-d9g" firstAttribute="centerX" secondItem="cR7-Ro-kvQ" secondAttribute="centerX" id="Ao1-Zq-Is9"/>
                             <constraint firstItem="yL9-X8-oRw" firstAttribute="centerX" secondItem="cR7-Ro-kvQ" secondAttribute="centerX" id="MWY-U0-GMh"/>
-                            <constraint firstItem="Gx6-YO-Xvt" firstAttribute="top" secondItem="cR7-Ro-kvQ" secondAttribute="top" constant="78" id="hRH-59-syO"/>
+                            <constraint firstItem="yL9-X8-oRw" firstAttribute="top" secondItem="Gx6-YO-Xvt" secondAttribute="bottom" constant="22" id="buA-uE-tHj"/>
                             <constraint firstItem="kEy-XE-Kwl" firstAttribute="centerX" secondItem="cR7-Ro-kvQ" secondAttribute="centerX" id="hTe-iP-CDd"/>
-                            <constraint firstItem="eul-35-d9g" firstAttribute="top" secondItem="Gx6-YO-Xvt" secondAttribute="bottom" constant="66" id="iUa-wP-eIG"/>
                             <constraint firstItem="Gx6-YO-Xvt" firstAttribute="centerX" secondItem="cR7-Ro-kvQ" secondAttribute="centerX" id="kHj-Ub-fb9"/>
-                            <constraint firstItem="yL9-X8-oRw" firstAttribute="top" secondItem="eul-35-d9g" secondAttribute="bottom" constant="38" id="klo-PH-6qN"/>
                             <constraint firstItem="kEy-XE-Kwl" firstAttribute="top" secondItem="MBA-L9-xO5" secondAttribute="bottom" constant="42" id="m1Q-Jq-Kpe"/>
                             <constraint firstItem="MBA-L9-xO5" firstAttribute="top" secondItem="yL9-X8-oRw" secondAttribute="bottom" constant="41" id="tdo-mS-fMe"/>
+                            <constraint firstItem="eul-35-d9g" firstAttribute="top" secondItem="cR7-Ro-kvQ" secondAttribute="top" constant="129" id="xFA-sN-x93"/>
                             <constraint firstItem="MBA-L9-xO5" firstAttribute="centerX" secondItem="cR7-Ro-kvQ" secondAttribute="centerX" id="xaM-1P-kdY"/>
+                            <constraint firstItem="Gx6-YO-Xvt" firstAttribute="top" secondItem="eul-35-d9g" secondAttribute="bottom" constant="31" id="yMm-8P-lxa"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="cR7-Ro-kvQ"/>
                     </view>
@@ -308,7 +308,7 @@
         <!--Users-->
         <scene sceneID="M9Y-Qa-SeN">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jiE-U2-UvD" sceneMemberID="viewController">
+                <navigationController title="Users" automaticallyAdjustsScrollViewInsets="NO" id="jiE-U2-UvD" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Users" id="rgB-0K-f0Z"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="w8c-lI-h4l">
@@ -324,10 +324,10 @@
             </objects>
             <point key="canvasLocation" x="-49.275362318840585" y="-199.55357142857142"/>
         </scene>
-        <!--Stock Price-->
+        <!--Stock price-->
         <scene sceneID="tQP-Ie-OBy">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ibu-18-29C" sceneMemberID="viewController">
+                <navigationController title="Stock price" automaticallyAdjustsScrollViewInsets="NO" id="Ibu-18-29C" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Stock Price" id="Y9p-ap-lsq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Y6Y-zv-Vxw">
