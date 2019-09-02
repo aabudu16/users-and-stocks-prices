@@ -58,10 +58,10 @@ class UserViewController: UIViewController {
    private func fetchUserData(){
         UserAPIClient.shared.fetchData { (result) in
             switch result {
-            case .failure(let error):
-                print("cant retrieve user \(error)")
+            case .failure( _):
+                print("cant retrieve user \(userError.cantProcessData)")
             case .success(let user):
-                self.allUser = user.results
+                self.allUser = user
             }
         }
     }
