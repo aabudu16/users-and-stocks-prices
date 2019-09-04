@@ -9,22 +9,30 @@
 import UIKit
 
 class StockPriceDetailedViewController: UIViewController {
-
+    var stock:Days!
+    @IBOutlet var stockImage: UIImageView!
+    @IBOutlet var stockDate: UILabel!
+    @IBOutlet var openPrice: UILabel!
+    @IBOutlet var closePrice: UILabel!
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        setupDetailedVC()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func setupDetailedVC(){
+        stockDate.text = stock.date
+        openPrice.text = "\(stock.open)"
+        closePrice.text = "\(stock.close)"
+        
+        if stock.open > stock.close{
+            stockImage.image = UIImage(named: "bullish")
+            view.backgroundColor = .green
+        }else{
+            stockImage.image = UIImage(named: "bears")
+            view.backgroundColor = .red
+        }
     }
-    */
+
 
 }

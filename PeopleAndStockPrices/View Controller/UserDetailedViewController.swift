@@ -17,6 +17,8 @@ class UserDetailedViewController: UIViewController {
     @IBOutlet var userStreet: UILabel!
     @IBOutlet var userCity: UILabel!
     @IBOutlet var userState: UILabel!
+    @IBOutlet var activityIndicatorView: UIActivityIndicatorView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupBackgroundAnimation()
@@ -24,17 +26,27 @@ class UserDetailedViewController: UIViewController {
     }
     func setupBackgroundAnimation(){
       let confetti = SAConfettiView(frame: self.view.bounds)
-        confetti.type = .Confetti
+        
+        switch detailedUser.gender{
+        case "female":
+            confetti.type = .Star
+        default:
+            confetti.type = .Diamond
+        }
         view.addSubview(confetti)
         confetti.startConfetti()
     }
     
     func setupDetailedVC(){
+        
         userImage.image = UIImage(named: "profileImage")
-        userName.text = detailedUser.name.convertFirstLetterToUpperCase()
+        userImage.layer.borderWidth = 4
+        userImage.layer.borderColor = UIColor.white.cgColor
+        userName.text = detailedUser.name.convertFirstLetterOfNameToUpperCase()
         userEmail.text = detailedUser.email
         userStreet.text = detailedUser.location.street
         userCity.text = detailedUser.location.city
         userState.text = detailedUser.location.state
+        self.activityIndicatorView.stopAnimating()
     }
 }

@@ -28,7 +28,7 @@ class UserViewController: UIViewController {
             guard searchString != "" else {
                 return allUser
             }
-            return allUser.filter({$0.name.convertFirstLetterToUpperCase().lowercased().replacingOccurrences(of: " ", with: "").contains(searchString.lowercased().replacingOccurrences(of: " ", with: ""))})
+            return allUser.filter({$0.name.convertFirstLetterOfNameToUpperCase().lowercased().replacingOccurrences(of: " ", with: "").contains(searchString.lowercased().replacingOccurrences(of: " ", with: ""))})
         }
     }
     
@@ -46,20 +46,25 @@ class UserViewController: UIViewController {
         super.viewDidLoad()
         setup()
         fetchUserData()
+        setupNavBar()
     }
     
-    func setup(){
+    private func setup(){
         userTableView.delegate = self
         userTableView.dataSource = self
         userSearchBar.delegate = self
-        self.navigationItem.title = "Contacts"
     }
     
-   private func fetchUserData(){
+    private func setupNavBar(){
+        self.navigationItem.title = "Contacts"
+        self.navigationController?.navigationBar.backgroundColor = .blue
+    }
+    
+    fileprivate func fetchUserData(){
         UserAPIClient.shared.fetchData { (result) in
             switch result {
             case .failure( _):
-                print("cant retrieve user \(userError.cantProcessData)")
+                print("cant retrieve user \(UserError.cantProcessData)")
             case .success(let user):
                 self.allUser = user
             }
@@ -70,7 +75,7 @@ class UserViewController: UIViewController {
 extension UserViewController:UITableViewDelegate{}
 extension UserViewController:UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-       
+        
         return userSearchResults.count
     }
     
@@ -79,8 +84,8 @@ extension UserViewController:UITableViewDataSource{
         
         let info = userSearchResults[indexPath.row]
         
-        cell.textLabel?.text = info.name.convertFirstLetterToUpperCase()
-        cell.detailTextLabel?.text = info.location.state
+        cell.textLabel?.text = info.name.convertFirstLetterOfNameToUpperCase()
+        cell.detailTextLabel?.text = info.location.convertFistLetterOfAddressToUpperCase()
         return cell
     }
     

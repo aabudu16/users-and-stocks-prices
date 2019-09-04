@@ -8,5 +8,41 @@
 
 import UIKit
 
-let stockApiKey = "8F004JP0BBOBTDN0"
-let StockURL = "https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol=MSFT&apikey=\(stockApiKey)"
+enum StockError:Error{
+    case noDataAvailable
+    case cantProcessData
+    case urlCanNotBeConverted
+}
+
+struct StockAPIClient{
+static let shared = StockAPIClient()
+let stockApiKey = "Tpk_99a13d1c51654f2ab13764626efa902a"
+    
+
+    func fetchStockData(complition: @escaping (Result<[Days], StockError>)->()){
+      let StockURL = "https://sandbox.iexapis.com/stable/stock/AAPL/chart/1m?token=\(stockApiKey)"
+        guard let url = URL(string: StockURL) else {complition(.failure(.urlCanNotBeConverted))
+            return
+        }
+        URLSession.shared.dataTask(with: url) { (data, _, err) in
+            
+            if let _ = err {
+                complition(.failure(.noDataAvailable))
+                return
+            }
+           
+            guard let retrievedData = data else { complition(.failure(.noDataAvailable))
+                return
+            }
+                do {
+                    let stockResponse = try JSONDecoder().decode([Days].self, from: retrievedData )
+                    let data = stockResponse
+                    complition(.success(data))
+                }catch{
+                   complition(.failure(.cantProcessData))
+            }
+            
+            
+        }.resume()
+    }
+}
