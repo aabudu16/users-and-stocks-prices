@@ -47,6 +47,6 @@ class UserDetailedViewController: UIViewController {
         userStreet.text = detailedUser.location.street
         userCity.text = detailedUser.location.city
         userState.text = detailedUser.location.state
-        self.activityIndicatorView.stopAnimating()
+        //self.activityIndicatorView.stopAnimating()
     }
 }
