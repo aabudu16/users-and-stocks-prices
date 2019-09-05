@@ -17,7 +17,6 @@ enum StockError:Error{
 struct StockAPIClient{
 static let shared = StockAPIClient()
 let stockApiKey = "Tpk_99a13d1c51654f2ab13764626efa902a"
-    
 
     func fetchStockData(complition: @escaping (Result<[Days], StockError>)->()){
       let StockURL = "https://sandbox.iexapis.com/stable/stock/AAPL/chart/1m?token=\(stockApiKey)"

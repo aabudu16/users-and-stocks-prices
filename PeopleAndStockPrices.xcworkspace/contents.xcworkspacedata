@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/mrwonderful/Desktop/PeopleAndStockPrices/PeopleAndStockPrices/ShowResultsCount.swift">
+   </FileRef>
+   <FileRef
       location = "group:PeopleAndStockPrices.xcodeproj">
    </FileRef>
    <FileRef

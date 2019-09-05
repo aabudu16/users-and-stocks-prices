@@ -19,6 +19,16 @@ struct Person:Codable{
     let location:Location
     let email:String
     let dob:DOB
+    let picture:Picture
+    
+    func loadImage(imageURL:URL) ->UIImage{
+        var image = UIImage()
+        
+        if let data = try? Data(contentsOf: imageURL){
+            image = UIImage(data: data)!
+        }
+        return image
+    }
 }
 
 struct PersonsName:Codable{
@@ -44,5 +54,9 @@ struct Location:Codable{
 struct DOB:Codable{
     let date:String
     let age:Int
+}
+
+struct Picture:Codable {
+    let medium:URL
 }
 

@@ -39,7 +39,7 @@ class UserDetailedViewController: UIViewController {
     
     func setupDetailedVC(){
         
-        userImage.image = UIImage(named: "profileImage")
+        userImage.image = detailedUser.loadImage(imageURL: detailedUser.picture.medium)
         userImage.layer.borderWidth = 4
         userImage.layer.borderColor = UIColor.white.cgColor
         userName.text = detailedUser.name.convertFirstLetterOfNameToUpperCase()
@@ -47,6 +47,6 @@ class UserDetailedViewController: UIViewController {
         userStreet.text = detailedUser.location.street
         userCity.text = detailedUser.location.city
         userState.text = detailedUser.location.state
-        //self.activityIndicatorView.stopAnimating()
+        
     }
 }

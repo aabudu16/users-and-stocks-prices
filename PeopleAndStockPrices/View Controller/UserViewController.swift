@@ -10,6 +10,9 @@ import UIKit
 
 class UserViewController: UIViewController {
     
+    @IBOutlet var footer: UIView!
+    @IBOutlet var footerView: UILabel!
+    
     @IBOutlet var userSearchBar: UISearchBar!
     
     var allUser = [Person]() {
@@ -19,6 +22,8 @@ class UserViewController: UIViewController {
             }
         }
     }
+    
+    
     
     var userSearchResults:[Person] {
         get{
@@ -34,11 +39,23 @@ class UserViewController: UIViewController {
     
     var UserSearchString:String? = nil {
         didSet {
+            setResultCount()
             self.userTableView.reloadData()
         }
     }
     
-    
+    private func setResultCount(){
+        switch userSearchResults.count{
+        case allUser.count:
+            navigationItem.title = "Contacts"
+        case 1:
+            navigationItem.title = "You have 1 result"
+        case 0:
+            navigationItem.title = "You have no results"
+        default:
+            navigationItem.title = "You have \(userSearchResults.count) results"
+        }
+    }
     
     
     @IBOutlet var userTableView: UITableView!
@@ -47,6 +64,7 @@ class UserViewController: UIViewController {
         setup()
         fetchUserData()
         setupNavBar()
+        
     }
     
     private func setup(){

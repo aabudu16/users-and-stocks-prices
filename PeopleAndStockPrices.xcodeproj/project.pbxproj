@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		850398A923214BDF0083666A /* ShowResultsCount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 850398A823214BDF0083666A /* ShowResultsCount.swift */; };
 		85EBCEE523199E7700DD5A5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EBCEE423199E7700DD5A5F /* AppDelegate.swift */; };
 		85EBCEE723199E7700DD5A5F /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 85EBCEE623199E7700DD5A5F /* UserViewController.swift */; };
 		85EBCEEA23199E7700DD5A5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 85EBCEE823199E7700DD5A5F /* Main.storyboard */; };
@@ -39,6 +40,7 @@
 		029AD4D5F559366391EFE154 /* Pods-PeopleAndStockPrices.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleAndStockPrices.debug.xcconfig"; path = "Target Support Files/Pods-PeopleAndStockPrices/Pods-PeopleAndStockPrices.debug.xcconfig"; sourceTree = "<group>"; };
 		1B728B7D41D478D03D06BCA3 /* Pods_PeopleAndStockPrices.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PeopleAndStockPrices.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44BB50DC5AC7F15DBF0E2B01 /* Pods-PeopleAndStockPrices.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleAndStockPrices.release.xcconfig"; path = "Target Support Files/Pods-PeopleAndStockPrices/Pods-PeopleAndStockPrices.release.xcconfig"; sourceTree = "<group>"; };
+		850398A823214BDF0083666A /* ShowResultsCount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ShowResultsCount.swift; path = /Users/mrwonderful/Desktop/PeopleAndStockPrices/PeopleAndStockPrices/ShowResultsCount.swift; sourceTree = "<absolute>"; };
 		85EBCEE123199E7600DD5A5F /* PeopleAndStockPrices.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleAndStockPrices.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85EBCEE423199E7700DD5A5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		85EBCEE623199E7700DD5A5F /* UserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				85EBCEE423199E7700DD5A5F /* AppDelegate.swift */,
+				850398A823214BDF0083666A /* ShowResultsCount.swift */,
 				85EBCF0F2319C29000DD5A5F /* Extensions */,
 				85EBCF042319A14000DD5A5F /* View Controller */,
 				85EBCF072319A70800DD5A5F /* Model file */,
@@ -327,6 +330,7 @@
 			files = (
 				85EBCEE723199E7700DD5A5F /* UserViewController.swift in Sources */,
 				85EBCF112319F14500DD5A5F /* StockPriceViewController.swift in Sources */,
+				850398A923214BDF0083666A /* ShowResultsCount.swift in Sources */,
 				85EBCF062319A16300DD5A5F /* UserModel.swift in Sources */,
 				85EBCF15231D602900DD5A5F /* StockAPIClient.swift in Sources */,
 				85EBCF132319F16000DD5A5F /* StockPriceDetailedViewController.swift in Sources */,

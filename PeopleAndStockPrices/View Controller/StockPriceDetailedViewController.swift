@@ -22,8 +22,8 @@ class StockPriceDetailedViewController: UIViewController {
     
     func setupDetailedVC(){
         stockDate.text = stock.date
-        openPrice.text = "\(stock.open)"
-        closePrice.text = "\(stock.close)"
+        openPrice.text = "OPEN: \(stock.open)"
+        closePrice.text = "PREV ClOSE: \(stock.close)"
         
         if stock.open > stock.close{
             stockImage.image = UIImage(named: "bullish")

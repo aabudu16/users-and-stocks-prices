@@ -103,9 +103,9 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="closing Price" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLY-hW-nVH">
-                                <rect key="frame" x="239" y="563" width="155" height="21"/>
+                                <rect key="frame" x="183" y="563" width="211" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="155" id="FXv-lH-3t4"/>
+                                    <constraint firstAttribute="width" constant="211" id="FXv-lH-3t4"/>
                                     <constraint firstAttribute="height" constant="21" id="cKM-7a-Q0s"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
