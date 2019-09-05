@@ -24,7 +24,7 @@ class NetworkManager {
             return
         }
         URLSession.shared.dataTask(with: url) { (data, response, error) in
-            guard error != nil else {
+            guard error == nil else {
                 complitionHandler(.failure(.networkError))
                 return
             }

@@ -84,7 +84,7 @@ class UserViewController: UIViewController {
             case .failure( _):
                 print("cant retrieve user \(UserError.cantProcessData)")
             case .success(let user):
-                self.allUser = user
+                self.allUser = user.sorted(by: {$0.name.first < $1.name.first})
             }
         }
     }
